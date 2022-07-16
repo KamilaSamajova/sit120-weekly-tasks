@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: rgb(7, 7, 94);
+}
+
+table {
+    width: 50%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+button {
+    background-color: rgb(138, 177, 190);
+}
