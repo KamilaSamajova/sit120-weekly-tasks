@@ -1,0 +1,146 @@
+body {
+    background-color: lightblue;
+}
+/* phones */
+@media (min-width: 0px) {
+    #container {
+        display: grid;
+        gap: 0.5%;
+        grid-template-areas: 
+        "menu"
+        "heading"
+        "picture"
+        "tab"
+        "checklist"
+        "par"
+        "button1"
+        "date"
+        "button2"
+        "tomorrow"
+    }
+}
+
+/* tablets */
+@media (min-width: 400px) {
+    #container {
+        display: grid;
+        gap: 0.5%;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "menu menu"
+        "heading heading"
+        "tab  picture "
+        "checklist  picture"
+        "par  picture"
+        "button1 picture"
+        "date picture"
+        "button2 picture"
+        "tomorrow picture"
+    }
+}
+
+/* laptops */
+@media (min-width: 700px) {
+    #container {
+        display: grid;
+        width: 99%;
+        gap: 5px;
+        grid-template-columns: 20% 20% 60%;
+        grid-template-areas: 
+        "menu menu menu"
+        "heading heading heading"
+        "tab tab  picture "
+        "checklist   par  picture"
+        "button1 button2 picture"
+        "date tomorrow picture"
+    }
+}
+
+#heading {
+    grid-area: heading;
+    font-size: 200%;
+}
+
+#menu {
+    grid-area: menu;
+}
+
+#picture {
+    grid-area: picture;
+    max-width: 100%;
+}
+
+#table {
+    grid-area: tab;
+    font-size: 120%;
+}
+
+#par {
+    grid-area: par;
+    font-size: 120%;
+}
+
+#checklist {
+    grid-area: checklist;
+    font-size: 120%;
+}
+
+#button1 {
+    grid-area: button1;
+}
+
+#date {
+    grid-area: date;
+}
+
+#button2 {
+    grid-area: button2;
+}
+
+#tomorrow {
+    grid-area: tomorrow;
+}
+
+h1 {
+    color: rgb(7, 7, 94);
+}
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+button {
+    background-color: rgb(138, 177, 190);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(7, 7, 94);
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-size: 120%;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
