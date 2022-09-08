@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="app">
+            <local-component></local-component>
+            <global-component></global-component>
+            <br>
+            <component2 :weekly-tasks="weeklyTasks"></component2>
+            <br>
+            <component3 @add="(random) => count += random"></component3>
+            <p>Sum of random numbers: {{ count }} </p>
+            <br>
+            <component4>
+                <h3>This is a slot component</h3>
+            </component4>
+            <component4>
+                <a href="https://v2.vuejs.org/v2/guide/components-slots.html">
+                    Here, you can learn more about slots
+                </a>
+            </component4>
+        </div>
+    </body>
+    <script type="text/x-template" id="component3">
+        <div>
+            <button @click="$emit('add', Math.random())">
+                Add random number
+            </button>
+        </div>
+    </script>
+    <script src="./components.js"></script>
+</html>
